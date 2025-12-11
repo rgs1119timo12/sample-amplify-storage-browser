@@ -11,9 +11,12 @@ import { Authenticator, Button } from '@aws-amplify/ui-react';
 Amplify.configure(config);
 
 const { StorageBrowser } = createStorageBrowser({
-  config: createAmplifyAuthAdapter(),
-  bucket: 'unban-styleguide',
-  region: 'ap-northeast-2',
+  config: {
+    credentialsProvider: createAmplifyAuthAdapter(),
+    registerAuthListener:()=>{},
+    bucket: 'unban-styleguide',      // 원하는 버킷
+    region: 'ap-northeast-2',        // 버킷 리전
+  },
 });
 
 function App() {

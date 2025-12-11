@@ -8,8 +8,7 @@ import { storage, secondaryStorage } from './storage/resource';
  */
 defineBackend({
   auth,
-  storage, 
-  secondaryStorage
+  storage
 });
 
 

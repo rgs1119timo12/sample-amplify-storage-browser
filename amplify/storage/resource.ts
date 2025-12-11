@@ -2,6 +2,7 @@ import { defineStorage } from '@aws-amplify/backend';
 
 export const storage = defineStorage({
   name: 'myStorageBucket',
+  bucketName: 'unban-styleguide',
   isDefault: true,
    access: (allow) => ({
     'public/*': [

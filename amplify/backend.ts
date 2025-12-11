@@ -27,13 +27,13 @@ const customBucketName = "unban-styleguide";
 backend.addOutput({
   version: "1.3",
   storage: {
-    aws_region: "us-east-1",
+    aws_region: "ap-northeast-2",
     bucket_name: customBucketName,
     buckets: [
       {
         name: customBucketName,
         bucket_name: customBucketName,
-        aws_region: "us-east-1",
+        aws_region: "ap-northeast-2",
         //@ts-expect-error amplify backend type issue https://github.com/aws-amplify/amplify-backend/issues/2569
         paths: {
           "public/*": {

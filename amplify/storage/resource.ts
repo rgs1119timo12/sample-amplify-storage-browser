@@ -3,14 +3,13 @@ import { defineStorage } from '@aws-amplify/backend';
 export const storage = defineStorage({
   name: 'myStorageBucket',
   isDefault: true,
-   access: (allow) => ({
-    'public/*': [
+  access: (allow) => [
+    {
+      path: 'public/*',
+      allowedActions: [
         allow.guest.to(['read', 'write']),
-        allow.authenticated.to(['read', 'write', 'delete'])
-]
-   })
+        allow.authenticated.to(['read', 'write', 'delete']),
+      ],
+    },
+  ],
 });
-
-
-
-

@@ -12,6 +12,8 @@ Amplify.configure(config);
 
 const { StorageBrowser } = createStorageBrowser({
   config: createAmplifyAuthAdapter(),
+  bucket: 'unban-styleguide',
+  region: 'ap-northeast-2',
 });
 
 function App() {

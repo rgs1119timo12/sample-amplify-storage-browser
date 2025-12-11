@@ -13,7 +13,7 @@ Amplify.configure(config);
 const { StorageBrowser } = createStorageBrowser({
   config: {
     credentialsProvider: createAmplifyAuthAdapter(),
-    registerAuthListener:()=>{},
+    registerAuthListener: ()=>{},
     bucket: 'unban-styleguide',      // 원하는 버킷
     region: 'ap-northeast-2',        // 버킷 리전
   },
